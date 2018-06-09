@@ -54,6 +54,7 @@ class User extends Authenticatable
 
     public function test()
     {
+        //testing confict
         return true;
     }
 }
