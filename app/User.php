@@ -30,4 +30,11 @@ class User extends Authenticatable
     public fucntion path() {
         return true;
     }
+
+    public fucntion age($id) 
+    {
+        $user = User::findOrFail($id);
+
+        return $user->age;
+    }
 }
