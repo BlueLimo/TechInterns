@@ -37,4 +37,11 @@ class User extends Authenticatable
 
         return $user->age;
     }
+
+    public function getName() 
+    {
+        $user = User::findOrFail($id);
+
+        return $user->name;
+    }
 }
