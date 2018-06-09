@@ -27,6 +27,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+<<<<<<< HEAD
     public fucntion path() {
         return true;
     }
@@ -36,5 +37,18 @@ class User extends Authenticatable
         $user = User::findOrFail($id);
 
         return $user->age;
+=======
+    public function details()
+    {
+        $users = User::all();
+
+        return $users->map( function ($user) {
+            return [
+                'name' => $user->firstname . ' ' . $user->secondname,
+                'age' => $user->age,
+                'username' => $user->username
+            ];
+        });
+>>>>>>> 9ad28a725372a6b2b462989508d3e37bc891cdd1
     }
 }
