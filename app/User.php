@@ -26,4 +26,17 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function details()
+    {
+        $users = User::all();
+
+        return $users->map( function ($user) {
+            return [
+                'name' => $user->firstname . ' ' . $user->secondname,
+                'age' => $user->age,
+                'username' => $user->username
+            ];
+        });
+    }
 }
