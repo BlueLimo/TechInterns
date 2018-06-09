@@ -27,6 +27,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+
     public function path() {
         return true;
     }
@@ -49,5 +50,16 @@ class User extends Authenticatable
                 'username' => $user->username
             ];
         });
+    }
+
+    public function test($id = null)
+    {
+        //testing confict
+
+        if($id) {
+            return false;
+        }
+
+        return true;
     }
 }
