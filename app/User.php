@@ -28,11 +28,11 @@ class User extends Authenticatable
     ];
 
 
-    public fucntion path() {
+    public function path() {
         return true;
     }
 
-    public fucntion age($id) 
+    public function age($id)
     {
         $user = User::findOrFail($id);
 
@@ -52,8 +52,11 @@ class User extends Authenticatable
         });
     }
 
-    public function test()
+    public function test($id = null)
     {
+        if($id) {
+            return false;
+        }
         return true;
     }
 }
