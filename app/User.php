@@ -27,17 +27,17 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-<<<<<<< HEAD
-    public fucntion path() {
+    public function path() {
         return true;
     }
 
-    public fucntion age($id) 
+    public function age($id)
     {
         $user = User::findOrFail($id);
 
         return $user->age;
-=======
+    }
+
     public function details()
     {
         $users = User::all();
@@ -49,6 +49,5 @@ class User extends Authenticatable
                 'username' => $user->username
             ];
         });
->>>>>>> 9ad28a725372a6b2b462989508d3e37bc891cdd1
     }
 }
