@@ -37,4 +37,7 @@ class User extends Authenticatable
 
         return $user->age;
     }
+    public function test(){
+        return "test passed";
+    }
 }
